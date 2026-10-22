@@ -12,6 +12,7 @@ theme:
     - navigation.footer
     - navigation.top
     - navigation.indexes
+    - content.action.edit # 各ページの右上に編集ボタンを出す
     - content.code.copy
     - content.code.annotate
     - search.highlight
