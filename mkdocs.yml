@@ -1,0 +1,92 @@
+site_name: マイコン＋ESP32 講座
+site_description: 電子工作サークルのマイコン（ESP32）講座の自習テキスト
+site_url: https://tuatdenno.github.io/esp32-course/
+repo_url: https://github.com/TUATdenno/esp32-course
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: ダークモードにする
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードにする
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: ja
+  - glightbox # 画像をクリックで拡大
+
+markdown_extensions:
+  - admonition
+  - attr_list # 画像サイズの指定 { width="400" }
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys # ++ctrl+s++ のようなキー表示
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - ホーム: index.md
+  - 第0部 導入:
+      - 0. マイコンとは？: 00-intro/index.md
+  - 第1部 基礎:
+      - 1. 環境構築: 01-basics/01-setup.md
+      - 2. Lチカ: 01-basics/02-blink.md
+      - 3. シリアルモニタ: 01-basics/03-serial.md
+      - 4. ボタン入力: 01-basics/04-button.md
+      - 5. PWM: 01-basics/05-pwm.md
+      - 6. アナログ入力: 01-basics/06-analog.md
+      - 7. delay を使わない書き方: 01-basics/07-millis.md
+  - 第2部 応用:
+      - 02-advanced/index.md
+      - I2C センサー: 02-advanced/i2c-sensor.md
+      - OLED ディスプレイ: 02-advanced/oled.md
+      - サーボモーター: 02-advanced/servo.md
+      - DC モーター: 02-advanced/dc-motor.md
+      - Wi-Fi（Web サーバ）: 02-advanced/wifi.md
+      - BLE: 02-advanced/ble.md
+      - ESP-NOW: 02-advanced/esp-now.md
+      - 赤外線の送受信: 02-advanced/ir.md
+  - 第3部 製作に向けて:
+      - 電源: 03-making/power.md
+      - 回路を作る: 03-making/board.md
+      - ミニ製作: 03-making/project.md
+  - 付録:
+      - ピン配置: appendix/pins.md
+      - 部品一覧: appendix/parts.md

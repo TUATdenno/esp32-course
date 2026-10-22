@@ -1,0 +1,5 @@
+site/
+.venv/
+.pio/
+.vscode/
+build.log

@@ -1,0 +1,17 @@
+# main に push すると GitHub Pages に公開する
+name: deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv run mkdocs gh-deploy --force
