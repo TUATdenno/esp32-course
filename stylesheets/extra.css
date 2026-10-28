@@ -1,0 +1,28 @@
+/* 豆知識コーナー：!!! mame "用語" で使う */
+:root {
+  --mame-color: #a1887f;
+}
+
+.md-typeset .admonition.mame,
+.md-typeset details.mame {
+  border-color: var(--mame-color);
+}
+
+.md-typeset .mame > .admonition-title,
+.md-typeset .mame > summary {
+  background-color: rgb(161 136 127 / 12%);
+}
+
+/* アイコンの代わりに「☞」を出す */
+.md-typeset .mame > .admonition-title::before,
+.md-typeset .mame > summary::before {
+  content: "☞";
+  -webkit-mask-image: none;
+  mask-image: none;
+  background-color: transparent;
+  color: var(--mame-color);
+  width: auto;
+  height: auto;
+  font-size: 1.1em;
+  line-height: 1.25;
+}
